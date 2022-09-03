@@ -1,14 +1,18 @@
 import discord
-import datetime
-import random
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
 import websweeper
+
+dotenv_path = Path('.env')
+load_dotenv(dotenv_path=dotenv_path)
 HELP = """
 $search (keyword) - show an image based on following keyword search
 
 $batchsearch (keyword) (amount)- show multiple images 
 """
 
-TOKEN = 'Discord_TOKEN_HERE'
 client = discord.Client(intents=discord.Intents.all())
 
 @client.event
@@ -45,4 +49,4 @@ async def on_message(message):
             await message.channel.send(u)
 
 
-client.run(TOKEN)
+client.run(os.getenv('TOKEN'))
