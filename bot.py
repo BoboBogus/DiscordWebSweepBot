@@ -8,11 +8,7 @@ $search (keyword) - show an image based on following keyword search
 $batchsearch (keyword) (amount)- show multiple images 
 """
 
-DHAR_LOGGER = open("dhar_log.txt", "at")
-TEXT_LOGGER = open("text_log.txt", "at")
-INPUT_TIME = datetime.datetime.now()
-ACTUAL_DATE = INPUT_TIME.strftime("%c")
-TOKEN = 'OTk2NTE1OTI0MzY4Njk1MzU2.GAHuio.ZSBBTUdH4LlbtRqNtkmdnTeRNJ-Jd06eHTBmbY'
+TOKEN = 'Discord_TOKEN_HERE'
 client = discord.Client(intents=discord.Intents.all())
 
 @client.event
